@@ -1,1 +1,9 @@
 <h1>WELCOME TO ROCK PAPER SCISSORS</h1>
+<h2>Player Move: <%= @game.player_move.capitalize %></h2>
+<h2>Computer Move: <%= @game.computer_play.capitalize %></h2>
+<h2>Result:</h2>
+<% case %>
+<% when @game.won? then %><h2>You Win!</h2>
+<% when @game.tied? then %><h2>Tie Game!</h2>
+<% else %><h2>You Lose!</h2>
+<% end %>
